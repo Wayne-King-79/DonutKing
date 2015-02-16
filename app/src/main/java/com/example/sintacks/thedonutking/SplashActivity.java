@@ -23,7 +23,7 @@ public class SplashActivity extends ActionBarActivity {
         setContentView(R.layout.activity_splash);
         getSupportActionBar().hide();
 
-        //final Intent mainIntent = new Intent(this, MainActivity.class);
+        final Intent mainIntent = new Intent(this, MainActivity.class);
 
         splashIV = (ImageView)findViewById(R.id.splash_image_view);
 
@@ -32,7 +32,7 @@ public class SplashActivity extends ActionBarActivity {
                 .setListener(new AnimationListener() {
                     @Override
                     public void onAnimationEnd(Animation animation) {
-                        //startActivity(mainIntent);
+                        startActivity(mainIntent);
                     }
                 })
                 .animate();
