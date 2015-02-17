@@ -23,4 +23,5 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.3'
     compile files('src/main/res/easyandroidanimationslibrary-v0.5.jar')
+    compile files('/home/sintacks/AndroidStudioProjects/TheDonutKing/jsoup-1.8.1.jar')
 }

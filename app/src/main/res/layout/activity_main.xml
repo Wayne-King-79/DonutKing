@@ -1,8 +1,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="50dp"
+    android:background="#2D308E"
     tools:context="com.example.sintacks.thedonutking.MainActivity">
+
 
 
     <TabHost
@@ -50,13 +52,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:orientation="vertical"></LinearLayout>
+
+
             </FrameLayout>
         </LinearLayout>
     </TabHost>
 
-    <TextView
+    <fragment
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:text="HELLO"/>
+        android:layout_marginTop="90dp"
+        android:name="com.example.sintacks.thedonutking.AboutFragment"
+        android:id="@+id/fragment"
+        android:layout_gravity="center_horizontal|top"
+        tools:layout="@layout/about_fragment" />
 </RelativeLayout>
