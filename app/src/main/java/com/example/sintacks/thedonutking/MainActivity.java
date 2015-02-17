@@ -1,11 +1,18 @@
 package com.example.sintacks.thedonutking;
 
+import android.app.Activity;
+import android.graphics.Color;
+import android.graphics.Typeface;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TabHost;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -14,9 +21,11 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        getSupportActionBar().hide();
+        /*
         getSupportActionBar().setTitle("Donut King");
         getSupportActionBar().setDisplayShowTitleEnabled(true);
+        */
 
         TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
         tabHost.setup();
@@ -32,6 +41,14 @@ public class MainActivity extends ActionBarActivity {
 
         TabHost.TabSpec spec4 = tabHost.newTabSpec("tab4").setContent(R.id.tab4).setIndicator("CONTACT");
         tabHost.addTab(spec4);
+
+        for (int i = 0; i < tabHost.getTabWidget().getChildCount(); i++) {
+            TextView tv = (TextView) tabHost.getTabWidget().getChildAt(i).findViewById(android.R.id.title);
+            tv.setTextColor(Color.parseColor("#2D308E"));
+            tv.setTextSize(11);
+            Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/rocko.ttf");
+            tv.setTypeface(tf);
+        }
     }
 
 
@@ -56,4 +73,5 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

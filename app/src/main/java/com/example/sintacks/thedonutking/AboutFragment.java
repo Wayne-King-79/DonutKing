@@ -1,6 +1,7 @@
 package com.example.sintacks.thedonutking;
 
 
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
+import android.widget.TextView;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -19,15 +21,16 @@ import java.io.IOException;
 
 public class AboutFragment extends Fragment{
 
-    WebView webView;
+    TextView aboutTV;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         getActivity().setContentView(R.layout.about_fragment);
 
-
+        aboutTV = (TextView)getActivity().findViewById(R.id.about_text_view);
+        Typeface tf = Typeface.createFromAsset(getActivity().getAssets(), "fonts/rocko.ttf");
+        aboutTV.setTypeface(tf);
     }
 
     @Override
