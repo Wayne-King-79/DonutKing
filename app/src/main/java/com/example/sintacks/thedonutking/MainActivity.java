@@ -22,11 +22,12 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
+
         /*
         getSupportActionBar().setTitle("Donut King");
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         */
-
+        /*
         TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
         tabHost.setup();
 
@@ -49,9 +50,10 @@ public class MainActivity extends ActionBarActivity {
             Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/rocko.ttf");
             tv.setTypeface(tf);
         }
+        */
     }
 
-
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -73,5 +75,6 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    */
 
 }

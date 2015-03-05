@@ -1,69 +1,71 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:background="#F0EA79"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/main_relative_layout"
+    android:background="#FFFFFF"
     tools:context="com.example.sintacks.thedonutking.MainActivity">
 
-
-
-    <TabHost
+    <HorizontalScrollView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/tabHost"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true">
+        android:layout_height="75dp"
+        android:scrollbarThumbHorizontal="@color/scroll_color"
+        android:scrollbarSize="3dp"
+        android:background="#FFFF00"
+        android:id="@+id/horizontal_scroll_view">
 
         <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="#FFFF00"
+            android:paddingRight="100dp">
 
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"></TabWidget>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/bar_title"
+                android:gravity="center"
+                android:textColor="#00008B"
+                android:text="@string/donut_king_title"
+                android:textSize="18sp"/>
 
-            <FrameLayout
-                android:id="@android:id/tabcontent"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30dp"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:id="@+id/home_button"
+                android:background="@drawable/home"/>
 
-                <LinearLayout
-                    android:id="@+id/tab1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:orientation="vertical"></LinearLayout>
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30dp"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:id="@+id/menu_button"
+                android:background="@drawable/menu"/>
 
-                <LinearLayout
-                    android:id="@+id/tab2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:orientation="vertical"></LinearLayout>
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30dp"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:id="@+id/map_button"
+                android:background="@drawable/map"/>
 
-                <LinearLayout
-                    android:id="@+id/tab3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:orientation="vertical"></LinearLayout>
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30dp"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:id="@+id/contact_button"
+                android:background="@drawable/contact"/>
 
-                <LinearLayout
-                    android:id="@+id/tab4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:orientation="vertical"></LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
 
-
-            </FrameLayout>
-        </LinearLayout>
-    </TabHost>
-
-    <fragment
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
-        android:name="com.example.sintacks.thedonutking.AboutFragment"
-        android:id="@+id/fragment"
-        android:layout_gravity="center_horizontal|top"
-        tools:layout="@layout/about_fragment" />
 </RelativeLayout>
